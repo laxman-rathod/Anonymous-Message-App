@@ -36,7 +36,7 @@ const MessageCards = ({ message, onMessageDelete }: MessageCardProps) => {
       `/api/delete-message/${message._id}`
     );
     toast({ title: response.data.message });
-    onMessageDelete(message._id); // TODO: Fuck this error.
+    onMessageDelete(message.id); // TODO: Fuck this error.
   };
 
   return (
