@@ -9,7 +9,6 @@ import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { signUpSchema } from "@/schemas/signUpSchema";
 import axios, { AxiosError } from "axios";
-import { ApiResponse } from "@/types/ApiResponse";
 import {
   Form,
   FormControl,
@@ -21,6 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
+import { ApiResponse } from "@/types/ApiResponse";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
