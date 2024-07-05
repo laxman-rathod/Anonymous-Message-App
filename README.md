@@ -97,10 +97,10 @@ The application should now be running at http://localhost:3000.
 ![Screenshot (1)](/public/home_page.png)
 
 **User Dashboard:**
-![Screenshot (2)](/public/public_profile.png)
+![Screenshot (2)](/public/user_dashboard.png)
 
 **Public Page**
-![Screenshot (3)](/public/user_dashboard.png)
+![Screenshot (3)](/public/public_profile.png)
 
 ## Project Structure 📂
 
