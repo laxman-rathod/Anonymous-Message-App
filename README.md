@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Anonymous Message - Tell them what you really think. Anonymously. 😉
 
 ## Introduction 🧩
@@ -129,3 +130,6 @@ Contributions are highly welcome!
 ## License 📝
 
 This project is licensed under the [MIT License](LICENSE).
+=======
+
+>>>>>>> 916104228689bf9f55aa8ddc40e74f80596cf832
