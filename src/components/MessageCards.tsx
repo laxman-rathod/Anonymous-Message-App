@@ -32,7 +32,7 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
   const handleDeleteConfirm = async () => {
     try {
       const response = await axios.delete<ApiResponse>(
-        `${process.env.SERVER_INFO}/api/delete-message/${message._id}`
+        `/api/delete-message/${message._id}`
       );
       toast({
         title: response.data.message,
