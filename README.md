@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Anonymous Message - Tell them what you really think. Anonymously. 😉
 
 ## Introduction 🧩
@@ -95,13 +94,13 @@ The application should now be running at http://localhost:3000.
 ## Screenshots 📸
 
 **Home Page:**
-![Screenshot (1)](/home_page.png)
+![Screenshot (1)](/public/home_page.png)
 
 **User Dashboard:**
-![Screenshot (2)](/public_profile.png)
+![Screenshot (2)](/public/public_profile.png)
 
 **Public Page**
-![Screenshot (3)](/user_dashboard.png)
+![Screenshot (3)](/public/user_dashboard.png)
 
 ## Project Structure 📂
 
@@ -130,6 +129,3 @@ Contributions are highly welcome!
 ## License 📝
 
 This project is licensed under the [MIT License](LICENSE).
-=======
-
->>>>>>> 916104228689bf9f55aa8ddc40e74f80596cf832
