@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail } from "lucide-react"; // Assuming you have an icon for messages
+import { Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 import messages from "@/messages.json";
