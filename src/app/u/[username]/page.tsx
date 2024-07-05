@@ -44,7 +44,7 @@ export default function SendMessage() {
     isLoading: isSuggestLoading,
     error,
   } = useCompletion({
-    api: "/api/suggest-messages",
+    api: `${process.env.SERVER_INFO}/api/suggest-messages`,
     initialCompletion: initialMessageString,
   });
 
@@ -63,10 +63,13 @@ export default function SendMessage() {
   const onSubmit = async (data: z.infer<typeof messageSchema>) => {
     setIsLoading(true);
     try {
-      const response = await axios.post<ApiResponse>("/api/send-message", {
-        ...data,
-        username,
-      });
+      const response = await axios.post<ApiResponse>(
+        `${process.env.SERVER_INFO}/api/send-message`,
+        {
+          ...data,
+          username,
+        }
+      );
 
       toast({
         title: response.data.message,

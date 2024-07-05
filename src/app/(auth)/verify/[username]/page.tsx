@@ -29,10 +29,13 @@ const VerifyAccount = () => {
 
   const onSubmit = async (data: z.infer<typeof verifySchema>) => {
     try {
-      const response = await axios.post(`/api/verify-code`, {
-        username: params.username,
-        code: data.code,
-      });
+      const response = await axios.post(
+        `${process.env.SERVER_INFO}/api/verify-code`,
+        {
+          username: params.username,
+          code: data.code,
+        }
+      );
       toast({
         title: "Success",
         description: response.data.message,
