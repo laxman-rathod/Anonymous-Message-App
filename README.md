@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anonymous Message - Tell them what you really think. Anonymously. 😉
 
-## Getting Started
+## Introduction 🧩
 
-First, run the development server:
+Anonymous Message is a platform designed for users to express themselves freely without revealing their identity. Built with a strong emphasis on privacy and security, it provides a safe space for sharing thoughts, feedback, or confessions.
+
+## Features 🪶
+
+- **Anonymous Messaging:** Send and receive messages without disclosing your identity.
+- **User-Friendly Interface:** Clean and intuitive design for a seamless user experience.
+- **Message Deletion:** Users have the option to delete their own messages.
+- **Secure Authentication:** Utilizes NextAuth.js for robust user authentication.
+- **Email Notifications (Optional):** Receive notifications for new messages (can be disabled).
+- **Moderation Features (Future Development):** Planned implementation of features to prevent misuse and ensure a respectful environment.
+
+## Technologies Used 🚀
+
+- **Frontend:** Next.js, React.js, TypeScript, Tailwind CSS
+- **Authentication:** NextAuth.js
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Email Service:** Resend
+- **Validation:** Zod
+- **Styling:** Tailwind CSS
+- **Other:** React Email, Vercel AI (Potential), Google Generative AI (Potential)
+
+## APIs 💫
+
+- **Resend API:** For sending email notifications (if enabled).
+- **(Optional) Vercel AI / Google Generative AI:** Potentially used for features like message summarization, translation, or intelligent responses.
+
+**Authentication:**
+
+- NextAuth.js(Authjs)
+- JWT
+
+**Deployment:**
+
+- Vercel
+- GitHub
+
+## Quick Demo 🪧
+
+Feel free to explore the quick demo by clicking [here](https://anonymous-messagess.vercel.app).
+
+## Getting Started 🔥
+
+### Prerequisites 🔮
+
+**Node.js and npm:** Download and install Node.js from https://nodejs.org/. This will also install npm.
+**MongoDB:** Set up a MongoDB database and obtain your connection URI.
+**Resend Account:** Create an account on Resend https://resend.com/ for email notifications (optional).
+
+### Installation ⚙️
+
+**1. Clone the repository:**
+
+```bash
+git clone https://github.com/laxman-rathod/Anonymous-Messages.git
+```
+
+**2. Navigate to the project directory:**
+
+```bash
+cd Anonymous-Messages
+```
+
+**3. Install dependencies:**
+
+```bash
+npm install
+```
+
+**4. Create a .env.local file in the root directory and add the following environment variables:**
+NEXTAUTH_URL=http://localhost:3000
+MONGODB_URI=<your-mongodb-connection-string>
+RESEND_API_KEY=<your-resend-api-key>
+GOOGLE_AI_API_KEY=<your-google-ai-api-key>
+
+**5. Run the development server:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application should now be running at http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage 🪴
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**1. Visit the application in your browser.**
+**2. (Optional) Create an account or log in.**
+**3. Send and receive anonymous messages.**
 
-## Learn More
+## Screenshots 📸
 
-To learn more about Next.js, take a look at the following resources:
+**Home Page:**
+![Screenshot (1)](/home_page.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**User Dashboard:**
+![Screenshot (2)](/public_profile.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Public Page**
+![Screenshot (3)](/user_dashboard.png)
 
-## Deploy on Vercel
+## Project Structure 📂
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Anonymous-Message
+  - public
+  - src
+    - app
+      - api
+    - components
+    - models
+    - schemas
+    - lib
+    - utils
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing 🤝
+
+Contributions are highly welcome!
+
+- Fork the repository.
+- Create a new branch (git checkout -b feature/your-feature-name).
+- Make your changes.
+- Commit your changes (git commit -m 'Add some feature').
+- Push to the branch (git push origin feature/your-feature-name).
+- Open a pull request.
+
+## License 📝
+
+This project is licensed under the [MIT License](LICENSE).
