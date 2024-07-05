@@ -11,14 +11,15 @@ export async function GET(request: Request) {
   await dbConnect();
 
   try {
-    // const { searchParams } = new URL(request.url);
-    // const queryParams = {
-    //   username: searchParams.get("username"),
-    // };
     const url = new URL(request.url);
     const Username = url.searchParams.get("username");
 
     const result = UsernameQuerySchema.safeParse(Username);
+
+    // const { searchParams } = new URL(request.url);
+    // const queryParams = {
+    //   username: searchParams.get("username"),
+    // } ;
 
     if (!result.success) {
       const usernameErrors = result.error.format().username?._errors || [];
