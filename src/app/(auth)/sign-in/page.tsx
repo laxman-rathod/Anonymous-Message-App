@@ -1,29 +1,26 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import Link from "next/link";
-import { useToast } from "@/components/ui/use-toast";
-import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
 import {
   Form,
-  FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useToast } from "@/components/ui/use-toast";
 import { signInSchema } from "@/schemas/signInSchema";
-import { signIn } from "next-auth/react";
 
-const Signup = () => {
-  const { toast } = useToast();
+export default function SignInForm() {
   const router = useRouter();
 
-  // zod implementation
   const form = useForm<z.infer<typeof signInSchema>>({
     resolver: zodResolver(signInSchema),
     defaultValues: {
@@ -32,14 +29,16 @@ const Signup = () => {
     },
   });
 
+  const { toast } = useToast();
   const onSubmit = async (data: z.infer<typeof signInSchema>) => {
     const result = await signIn("credentials", {
       redirect: false,
       identifier: data.identifier,
       password: data.password,
     });
+
     if (result?.error) {
-      if (result.error == "CredentialsSignin") {
+      if (result.error === "CredentialsSignin") {
         toast({
           title: "Login Failed",
           description: "Incorrect username or password",
@@ -53,17 +52,18 @@ const Signup = () => {
         });
       }
     }
+
     if (result?.url) {
       router.replace("/dashboard");
     }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen bg-gray-800">
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl mb-6">
-            Join Anonymous Message
+            Welcome Back to Anonymous Message
           </h1>
           <p className="mb-4">Sign in to continue your secret conversations</p>
         </div>
@@ -75,9 +75,7 @@ const Signup = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Email/Username</FormLabel>
-                  <FormControl>
-                    <Input placeholder="email/username" {...field} />
-                  </FormControl>
+                  <Input {...field} />
                   <FormMessage />
                 </FormItem>
               )}
@@ -88,27 +86,25 @@ const Signup = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Password</FormLabel>
-                  <FormControl>
-                    <Input type="password" placeholder="password" {...field} />
-                  </FormControl>
+                  <Input type="password" {...field} />
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit">Signin</Button>
+            <Button className="w-full" type="submit">
+              Sign In
+            </Button>
           </form>
         </Form>
         <div className="text-center mt-4">
           <p>
             Not a member yet?{" "}
             <Link href="/sign-up" className="text-blue-600 hover:text-blue-800">
-              Sign Up
+              Sign up
             </Link>
           </p>
         </div>
       </div>
     </div>
   );
-};
-
-export default Signup;
+}
