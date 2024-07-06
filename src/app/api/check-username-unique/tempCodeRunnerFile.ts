@@ -2,19 +2,17 @@ import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/models/User";
 import { z } from "zod";
 import { usernameValidation } from "@/schemas/signUpSchema";
-import { NextRequest } from "next/server";
 
 const UsernameQuerySchema = z.object({
   username: usernameValidation,
 });
 
-export async function GET(request: NextRequest) {
+export async function GET(request: Request) {
   await dbConnect();
 
   try {
-    const usernameParam = request.nextUrl.pathname
-      .startsWith("username")
-      .valueOf();
+    const url = new URL(request.url);
+    const usernameParam = url.searchParams.get("username");
     const result = UsernameQuerySchema.safeParse({ username: usernameParam });
 
     if (!result.success) {
