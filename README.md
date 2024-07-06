@@ -49,9 +49,9 @@ Feel free to explore the quick demo by clicking [here](https://anonymous-message
 
 ### Prerequisites 🔮
 
-**Node.js and npm:** Download and install Node.js from https://nodejs.org/. This will also install npm.
-**MongoDB:** Set up a MongoDB database and obtain your connection URI.
-**Resend Account:** Create an account on Resend https://resend.com/ for email notifications (optional).
+- **Node.js and npm:** Download and install Node.js from [NodeJS](https://nodejs.org/). This will also install npm.
+- **MongoDB:** Set up a MongoDB database and obtain your connection URI.
+- **Resend Account:** Create an account on [Resend](https://resend.com) for email notifications (optional).
 
 ### Installation ⚙️
 
@@ -134,4 +134,4 @@ Contributions are highly welcome!
 
 ## License 📝
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT LICENSE. See the [License](LICENSE) file for details.
