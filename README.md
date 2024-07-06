@@ -74,10 +74,14 @@ npm install
 ```
 
 **4. Create a .env.local file in the root directory and add the following environment variables:**
-NEXTAUTH_URL=http://localhost:3000
+
+```bash
+SERVER_INFO=localhost:3000
+NEXTAUTH_SECRET=<your-next-auth-secret>
 MONGODB_URI=<your-mongodb-connection-string>
 RESEND_API_KEY=<your-resend-api-key>
-GOOGLE_AI_API_KEY=<your-google-ai-api-key>
+GOOGLE_GENERATIVE_AI_API_KEY=<your-google-ai-api-key>
+```
 
 **5. Run the development server:**
 
