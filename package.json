@@ -17,7 +17,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.1",
-    "@react-email/components": "^0.0.19",
+    "@react-email/components": "^0.0.21",
     "@react-email/render": "^0.0.16",
     "ai": "^3.2.15",
     "axios": "^1.7.2",
