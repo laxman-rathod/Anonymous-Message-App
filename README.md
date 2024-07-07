@@ -12,7 +12,7 @@ Anonymous Message is a platform designed for users to express themselves freely 
 - **User-Friendly Interface:** Clean and intuitive design for a seamless user experience.
 - **Message Deletion:** Users have the option to delete their own messages.
 - **Secure Authentication:** Utilizes NextAuth.js for robust user authentication.
-- **Email Notifications (Optional):** Receive notifications for new messages (can be disabled).
+- **Email Notifications:** Receive notifications for new messages.
 - **Moderation Features (Future Development):** Planned implementation of features to prevent misuse and ensure a respectful environment.
 
 ## Technologies Used 🚀
@@ -29,7 +29,7 @@ Anonymous Message is a platform designed for users to express themselves freely 
 ## APIs 💫
 
 - **Resend API:** For sending email notifications (if enabled).
-- **(Optional) Vercel AI / Google Generative AI:** Potentially used for features like message summarization, translation, or intelligent responses.
+- **Vercel AI / Google Generative AI:** Potentially used for features like message summarization, translation, or intelligent responses.
 
 **Authentication:**
 
@@ -39,6 +39,7 @@ Anonymous Message is a platform designed for users to express themselves freely 
 **Deployment:**
 
 - Vercel
+- Render
 - GitHub
 
 ## Quick Demo 🪧
