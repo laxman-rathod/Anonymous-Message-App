@@ -42,7 +42,7 @@ function Navbar() {
                 className="w-full md:w-auto bg-slate-800 text-white"
                 variant={"outline"}
               >
-                Join us
+                Join Now
               </Button>
             </Link>
           </div>
