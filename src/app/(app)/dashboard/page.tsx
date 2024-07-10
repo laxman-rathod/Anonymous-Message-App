@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCard } from "@/components/MessageCards";
+import { MessageCard } from "@/components/MessageCard";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
@@ -179,9 +179,9 @@ function UserDashboard() {
       </Button>
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
         {messages.length > 0 ? (
-          messages.map((message) => (
+          messages.map((message, index) => (
             <MessageCard
-              key={message.id}
+              key={message._id as string}
               message={message}
               onMessageDelete={handleDeleteMessage}
             />

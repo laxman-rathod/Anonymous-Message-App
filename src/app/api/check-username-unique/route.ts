@@ -12,9 +12,7 @@ export async function GET(request: NextRequest) {
   await dbConnect();
 
   try {
-    const usernameParam = request.nextUrl.pathname
-      .startsWith("username")
-      .valueOf();
+    const usernameParam = new URL(request.nextUrl).searchParams.get("username");
     const result = UsernameQuerySchema.safeParse({ username: usernameParam });
 
     if (!result.success) {
@@ -56,7 +54,6 @@ export async function GET(request: NextRequest) {
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error checking username:", error);
     return Response.json(
       {
         success: false,

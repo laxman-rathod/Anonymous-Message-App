@@ -4,6 +4,7 @@ import React from "react";
 import axios, { AxiosError } from "axios";
 import dayjs from "dayjs";
 import { X } from "lucide-react";
+import { Message } from "@/models/User";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   AlertDialog,
@@ -19,9 +20,9 @@ import {
 import { Button } from "./ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { ApiResponse } from "@/types/ApiResponse";
-import { Message } from "@/models/User";
 
 type MessageCardProps = {
+  _id?: string;
   message: Message;
   onMessageDelete: (messageId: string) => void;
 };
@@ -37,7 +38,7 @@ export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
       toast({
         title: response.data.message,
       });
-      onMessageDelete(message.id);
+      onMessageDelete(message._id as string);
     } catch (error) {
       const axiosError = error as AxiosError<ApiResponse>;
       toast({
