@@ -3,20 +3,19 @@ import { ApiResponse } from "@/types/ApiResponse";
 import VerificationEmail from "../../emails/VerificationEmail";
 
 export async function sendVerificationEmail(
-  username: string,
   email: string,
   verifyCode: string
 ): Promise<ApiResponse> {
   try {
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: process.env.EMAIL_FROM as string,
       to: email,
       subject: "Anonymous Message Verification Code",
-      react: VerificationEmail({ username, otp: verifyCode }),
+      react: VerificationEmail({ otp: verifyCode }),
     });
     return {
       success: true,
-      message: "Email varification sent successfully",
+      message: "User registered successfully",
     };
   } catch (emailError) {
     return {
@@ -25,4 +24,3 @@ export async function sendVerificationEmail(
     };
   }
 }
-

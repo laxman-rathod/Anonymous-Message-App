@@ -60,11 +60,7 @@ export async function POST(request: Request) {
     }
 
     // send verification email
-    const emailResponse = await sendVerificationEmail(
-      username,
-      email,
-      verifyCode
-    );
+    const emailResponse = await sendVerificationEmail(email, verifyCode);
 
     if (!emailResponse.success) {
       return Response.json(
@@ -79,7 +75,7 @@ export async function POST(request: Request) {
     return Response.json(
       {
         success: true,
-        message: "User registered successfully",
+        message: "Email varification sent successfully",
       },
       { status: 200 }
     );
