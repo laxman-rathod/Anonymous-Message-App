@@ -8,12 +8,11 @@ export async function sendVarificationEmail(
   verifyCode: string
 ): Promise<ApiResponse> {
   try {
-    console.log("Email and OTP: ", email, verifyCode);
     await resend.emails.send({
       from: "onboarding@resend.dev",
       to: email,
       subject: "Anonymous Message Verification Code",
-      react: VerificationEmail({ username: username, otp: verifyCode }),
+      react: VerificationEmail({ username, otp: verifyCode }),
     });
     return {
       success: true,
