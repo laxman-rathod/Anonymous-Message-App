@@ -26,13 +26,10 @@ export async function GET(request: Request) {
     ]).exec();
 
     if (!user || user.length === 0 || !user[0].messages) {
-      return Response.json(
-        { success: false, message: [] }, // Return an empty array if no messages
-        { status: 404 }
-      );
+      return Response.json({ success: false, message: [] });
     }
     return Response.json(
-      { sucess: true, message: user[0].messages },
+      { success: true, messages: user[0].messages },
       { status: 200 }
     );
   } catch (error) {
