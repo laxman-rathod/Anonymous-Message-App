@@ -2,9 +2,9 @@ import { resend } from "@/lib/resend";
 import { ApiResponse } from "@/types/ApiResponse";
 import VerificationEmail from "../../emails/VerificationEmail";
 
-export async function sendVarificationEmail(
-  email: string,
+export async function sendVerificationEmail(
   username: string,
+  email: string,
   verifyCode: string
 ): Promise<ApiResponse> {
   try {
@@ -25,3 +25,4 @@ export async function sendVarificationEmail(
     };
   }
 }
+
