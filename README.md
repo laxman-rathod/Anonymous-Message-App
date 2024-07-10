@@ -1,5 +1,3 @@
-*Deployment in progress*
-
 # Anonymous Message - Tell them what you really think. Anonymously. 😉
 
 ## Introduction 🧩
