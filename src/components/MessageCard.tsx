@@ -29,7 +29,6 @@ type MessageCardProps = {
 
 export function MessageCard({ message, onMessageDelete }: MessageCardProps) {
   const { toast } = useToast();
-
   const handleDeleteConfirm = async () => {
     try {
       const response = await axios.delete<ApiResponse>(
