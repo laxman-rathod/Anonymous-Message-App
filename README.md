@@ -11,7 +11,6 @@ Anonymous Message is a platform designed for users to express themselves freely 
 - **Message Deletion:** Users have the option to delete their own messages.
 - **Secure Authentication:** Utilizes NextAuth.js for robust user authentication.
 - **Email Notifications:** Receive notifications for new messages.
-- **Moderation Features (Future Development):** Planned implementation of features to prevent misuse and ensure a respectful environment.
 
 ## Technologies Used 🚀
 
@@ -106,19 +105,6 @@ The application should now be running at http://localhost:3000.
 
 **Public Page**
 ![Screenshot (3)](/public/public_profile.png)
-
-## Project Structure 📂
-
-- Anonymous-Message
-  - public
-  - src
-    - app
-      - api
-    - components
-    - models
-    - schemas
-    - lib
-    - utils
 
 ## Contributing 🤝
 
